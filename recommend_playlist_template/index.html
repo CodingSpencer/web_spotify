@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Playlist</title>
+    <script src="test.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="submit">
+        <h1>Customize Recommendations</h1>
+
+        <div class="dance">
+          <label for="dance-select">Danceability:</label>
+          <select id="dance-select">
+            <option value="more">More</option>
+            <option value="less">Less</option>
+          </select>
+        </div>
+
+        <div class="liveness">
+          <label for="liveness-select">Liveness:</label>
+          <select id="liveness-select">
+            <option value="more">More</option>
+            <option value="less">Less</option>
+          </select>
+        </div>
+
+        <div class="acoustic">
+          <label for="acoustic-select">Acousticness:</label>
+          <select id="acoustic-select">
+            <option value="more">More</option>
+            <option value="less">Less</option>
+          </select>
+        </div>
+
+        <button id="submitButton">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
