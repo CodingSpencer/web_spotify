@@ -1,3 +1,4 @@
+// Spotify API Tutorial (Spotify Developer)
 const token =
   "BQBcvvIHvMZaZzOxMBezQKrV3jQh_lHP5bn3LR89aD9vmYuWMWlQPR7hr0KGDzEhDirtMtreyJLcmkb-xuvbaDnJjaiaDMDYTnbYvvAqXTcM20p89XNmgUszWTBEi4F4FH5iWiXv2AtcVirjWI5nxqiDnc82Grb8DqIlGnlKZk7F3a_rwCJ6xReC_zXJCPDpOoVlMek0yu6eRGBl7fTOodDS2Y7tYysLLZxsIMUUbjV4AYbko04CUy-rOB5j12SljpWcKw";
 
@@ -11,6 +12,7 @@ async function fetchWebApi(endpoint, method, body) {
   });
   return await res.json();
 }
+// End Spotify API Tutorial (Spotify Developer)
 
 function setRecommendations(select) {
   if (select === "acoustic") {
@@ -62,6 +64,7 @@ function setRecommendations(select) {
 //   }
 // }
 
+// Spotify API Tutorial (Spotify Developer) - With small amount of changes
 async function getTopTracks() {
   // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
   return (
@@ -97,32 +100,20 @@ async function createPlaylist(tracksUri) {
 
   return playlist;
 }
+// End Spotify API Tutorial (Spotify Developer)
 
 async function main(end) {
   const topTracks = await getTopTracks();
-  console.log(
-    topTracks?.map(
-      ({ name, artists }) =>
-        `${name} by ${artists.map((artist) => artist.name).join(", ")}`
-    )
-  );
 
   let tracksUri = topTracks.map((track) => `spotify:track:${track.id}`);
 
   const recommendedTracks = await getRecommendations(end);
-  console.log(
-    recommendedTracks?.map(
-      ({ name, artists }) =>
-        `${name} by ${artists.map((artist) => artist.name).join(", ")}`
-    )
-  );
 
   tracksUri = tracksUri.concat(
     recommendedTracks.map((track) => `spotify:track:${track.id}`)
   );
 
   const createdPlaylist = await createPlaylist(tracksUri);
-  console.log(createdPlaylist.name, createdPlaylist.id);
 
   const iframe = document.createElement("iframe");
   iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}`;
