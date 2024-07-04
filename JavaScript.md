@@ -19,7 +19,7 @@ HTML, CSS, JavaScript
 - [Refreshing Tokens](https://developer.spotify.com/documentation/web-api/tutorials/refreshing-tokens)
 - [Genre Example](https://www.youtube.com/watch?v=0dmS0He_czs)
 - [ChatGPT](chatgpt.com)
-- [Web Site Name](http://url.link.goes.here)
+- [GitHub](https://github.com/CodingSpencer/web_spotify.git)
 
 # Future Work
 
