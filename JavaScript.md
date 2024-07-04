@@ -4,7 +4,7 @@ I attemmpted to implement Spotify's API via JavaScript. Most projects using this
 
 I love music and sometimes I don't always love spotify's recommendations. I wanted to see how it worked and if I could customize them for myself.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/o8nfVuPGtao)
 
 # Development Environment
 

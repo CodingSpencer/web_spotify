@@ -4,34 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Playlist</title>
-    <script src="test.js" defer></script>
+    <script src="recommend_template.js" defer></script>
   </head>
   <body>
     <div class="container">
       <form action="submit">
         <h1>Customize Recommendations</h1>
 
-        <div class="dance">
-          <label for="dance-select">Danceability:</label>
-          <select id="dance-select">
-            <option value="more">More</option>
-            <option value="less">Less</option>
-          </select>
-        </div>
-
-        <div class="liveness">
-          <label for="liveness-select">Liveness:</label>
-          <select id="liveness-select">
-            <option value="more">More</option>
-            <option value="less">Less</option>
-          </select>
-        </div>
-
-        <div class="acoustic">
-          <label for="acoustic-select">Acousticness:</label>
-          <select id="acoustic-select">
-            <option value="more">More</option>
-            <option value="less">Less</option>
+        <div id="customize">
+          <label for="genre-select">Genre: </label>
+          <select id="genre-select">
+            <option value="liveness">Liveness</option>
+            <option value="acoustic">Acoustic</option>
+            <option value="dance">Dance</option>
           </select>
         </div>
 
